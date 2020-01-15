@@ -117,7 +117,12 @@ footer {
 .content-wrapper, 
 .portfolio-wrapper,
 .service-wrapper,
-.about-wrapper {
+.about-wrapper,
+.contact-wrapper,
+.wb-wrapper,
+.aa-wrapper,
+.church-wrapper,
+.sx-wrapper {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -168,8 +173,37 @@ footer {
 	flex-flow: row wrap;
 }
 
-
-
+input[type=text], select, textarea {
+    width: 20.625em;
+    padding: 8px;
+    border: 1.5px solid #f3480a;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    resize: vertical;
+	background-color: transparent;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+}
+input[type=submit] {
+    background-color: #f3480a;
+    color: black;
+    padding: 0 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+}
+input[type=submit]:hover {
+    background-color: white;
+}
 
 /* -------------------- HEADER CONTENT STYLES -------------------- */
 
@@ -190,7 +224,8 @@ body {
 
 .portfolio-heading h2,
 .service-heading h2,
-.about-heading h2 {
+.about-heading h2,
+.contact-heading h2 {
 	font-family: 'neuropol-nova', sans-serif;
     font-size: 2.25em;
     color: white;
@@ -199,6 +234,53 @@ body {
 	display: block;
 	justify-content: center;
 	align-items: center;
+	flex-flow: row wrap;
+}
+
+.wb-heading h2,
+.aa-heading h2,
+.church-heading h2,
+.sx-heading h2 {
+	font-family: 'neuropol-nova', sans-serif;
+    font-size: 1.5em;
+    color: white;
+    margin: 60px 85px;
+    text-shadow: 2px 2px 4px #000000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+}
+.wb-heading h3,
+.aa-heading h3,
+.church-heading h3,
+.sx-heading h3 {
+	font-family: 'Poiret One', cursive;
+	font-size: 1.5em;
+    font-weight: bold;
+	text-shadow: 2px 2px 4px #000000;
+	color: #f3480a;
+	margin: 0 10px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-flow: row wrap;
+	margin-top: -40px;
+}
+.wb-heading p,
+.aa-heading p,
+.church-heading p,
+.sx-heading p {
+	font-family: 'Poiret One', cursive;
+	font-size: 1.25em;
+    font-weight: normal;
+	text-shadow: 2px 2px 4px #000000;
+	color: white;
+	text-align: justify;
+	margin: 0 10px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
 	flex-flow: row wrap;
 }
 
@@ -216,13 +298,38 @@ body {
 
 .portfolio-container,
 .service-container,
-.about-container {
+.about-container,
+.contact-container {
 	padding: 10px 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
 	margin: -25px 0;
+}
+
+.wb-container,
+.logo-column,
+.wbcolor-scheme,
+.typo-column,
+.icon-column,
+.aa-container,
+.aacolor-scheme,
+.hero-column,
+.aasite-imagery,
+.church-container,
+.churchcolor-scheme,
+.churchlogo-column,
+.churchicon-column,
+.sx-container,
+.sxcolor-scheme,
+.sxicon-column {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	margin-top: 10px;
 }
 
 .column img {
@@ -385,6 +492,179 @@ body {
 	animation: indesign 5s;
 }
 
+.contact-main h3 {
+	font-family: 'Poiret One', cursive;
+	font-size: 1.5em;
+    font-weight: bold;
+	text-shadow: 2px 2px 4px #000000;
+	color: #f3480a;
+	margin: 0px 10px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-flow: row wrap;
+	margin-top: -20px;
+}
+.contact-main p {
+	font-family: 'Poiret One', cursive;
+    font-size: 1.37em;
+	text-align: justify;
+    color: white;
+    text-shadow: 2px 2px 2px #000000;
+	margin: 0px 10px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-flow: row wrap;
+	margin-bottom: 50px;
+}
+
+.wb-brief,
+.wb-approach,
+.text,
+.end-prod,
+.aa-brief,
+.aa-approach,
+.aa-website,
+.church-brief,
+.church-approach,
+.sx-brief,
+.sx-approach {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-flow: row wrap;
+	margin-top: 10px;
+}
+
+.wb-brief h3, 
+.wb-approach h3,
+.end-prod h3,
+.aa-brief h3,
+.aa-approach h3,
+.aa-website h3,
+.church-brief h3,
+.church-approach h3,
+.sx-brief h3,
+.sx-approach h3,
+.sx-website h3 {
+	font-family: 'Poiret One', cursive;
+	font-size: 1.5em;
+    font-weight: bold;
+	text-shadow: 2px 2px 4px #000000;
+	color: #f3480a;
+	margin: 0 10px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-flow: row wrap;
+}
+.wb-brief p,
+.wb-approach p,
+.end-prod p,
+.aa-brief p,
+.aa-approach p,
+.aa-website p,
+.church-brief p,
+.church-approach p,
+.sx-brief p,
+.sx-approach p,
+.sx-website p {
+	font-family: 'Poiret One', cursive;
+	font-size: 1.125em;
+    font-weight: normal;
+	text-shadow: 2px 2px 4px #000000;
+	color: white;
+	text-align: justify;
+	margin: 0 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+}
+
+.text p {
+	font-family: 'Poiret One', cursive;
+	font-size: 1.125em;
+    font-weight: normal;
+	text-shadow: 2px 2px 4px #000000;
+	color: white;
+	text-align: justify;
+	margin: 0 15px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-flow: row wrap;
+}
+
+.text p span {
+	color: #f3480a;
+	font-weight: bold;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-flow: row wrap;
+}
+
+.logo-column img,
+.typo-column img,
+.sxicon-column img {
+	margin-top: 8px;
+  	vertical-align: middle;
+	border: 1px solid #f3480a;
+  	border-radius: 2px;
+  	padding: 42px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+}
+
+.wbcolor-scheme img,
+.aacolor-scheme img,
+.aasite-imagery img,
+.churchcolor-scheme img,
+.sxcolor-scheme img {
+	width: 85%;
+	margin-top: 8px;
+  	vertical-align: middle;
+	border: 1px solid #f3480a;
+  	border-radius: 2px;
+  	padding: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+}
+
+.churchlogo-column img {
+	width: 75%;
+	margin-top: 8px;
+  	vertical-align: middle;
+	border: 1px solid #f3480a;
+  	border-radius: 2px;
+  	padding: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+}
+
+.icon-column img,
+.hero-column img,
+.churchicon-column img {
+	margin-top: 8px;
+  	vertical-align: middle;
+	border: 1px solid #f3480a;
+  	border-radius: 2px;
+  	padding: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+}
+
 
 /* -------------------- FOOTER CONTENT STYLES -------------------- */
 
@@ -398,7 +678,12 @@ body {
 
 .portfolio-social,
 .service-social,
-.about-social {
+.about-social,
+.contact-social,
+.wb-social,
+.aa-social,
+.church-social,
+.sx-social {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -411,14 +696,24 @@ body {
 .social ul,
 .portfolio-social ul,
 .service-social ul,
-.about-social ul {
+.about-social ul,
+.contact-social ul,
+.wb-social ul,
+.aa-social ul,
+.church-social ul,
+.sx-social ul {
     list-style: none;
 }
 
 .social ul li,
 .portfolio-social ul li,
 .service-social ul li,
-.about-social ul li {
+.about-social ul li,
+.contact-social ul li,
+.wb-social ul li,
+.aa-social ul li,
+.church-social ul li,
+.sx-social ul li {
 	display: inline-flex;
 }
 
