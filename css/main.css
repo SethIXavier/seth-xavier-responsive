@@ -107,6 +107,38 @@ html {
   	background-size: cover;
 }
 
+input[type=text], select, textarea {
+    width: 20.625em;
+    padding: 8px;
+    border: 1.5px solid #f3480a;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    resize: vertical;
+	background-color: transparent;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+}
+input[type=submit] {
+    background-color: #f3480a;
+    color: black;
+    padding: 0 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+}
+input[type=submit]:hover {
+    background-color: white;
+}
+
 .about-top p br,
 .wb-heading p br,
 .aa-heading p br,
@@ -186,38 +218,6 @@ footer {
 	flex-flow: column wrap;
 	margin-left: 0;
 	padding-top: 0;
-}
-
-input[type=text], select, textarea {
-    width: 20.625em;
-    padding: 8px;
-    border: 1.5px solid #f3480a;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    resize: vertical;
-	background-color: transparent;
-	color: white;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: row wrap;
-}
-input[type=submit] {
-    background-color: #f3480a;
-    color: black;
-    padding: 0 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: row wrap;
-}
-input[type=submit]:hover {
-    background-color: white;
 }
 
 /* -------------------- HEADER CONTENT STYLES -------------------- */
@@ -676,38 +676,6 @@ header-divider {
 	flex-flow: row wrap;
 }
 
-.countup {
-  	margin: 0 10px;
-	margin-bottom: 30px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: row wrap;
-}
-.countup .timeel {
-  	display: inline-block;
-  	background: transparent;
-  	margin: 0;
-  	color: white;
-  	min-width: 2rem;
-  	border-radius: 0 0 0 0;
-	font-family: 'Poiret One', cursive;
-    font-size: 4em;
-    text-shadow: 2px 2px 4px #000000;
-	font-weight: bold;
-}
-.countup span[class*="timeRef"] {
-  	border-radius: 0 0 0 0;
-  	margin-left: 0;
-  	background: transparent;
-  	color: #f3480a;
-	font-family: 'Poiret One', cursive;
-   	font-size: 1.5em;
-	font-weight: bold;
-    text-shadow: 2px 2px 4px #000000;
-}
-
-
 /* -------------------- FOOTER CONTENT STYLES -------------------- */
 
 .social {
@@ -929,6 +897,38 @@ header-divider {
   		background-size: cover;
 	}
 	
+	input[type=text], select, textarea {
+    	width: 30em;
+    	padding: 8px;
+    	border: 1.5px solid #f3480a;
+    	border-radius: 4px;
+    	box-sizing: border-box;
+    	margin-top: 3px;
+    	margin-bottom: 3px;
+    	resize: vertical;
+		background-color: transparent;
+		color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+	input[type=submit] {
+    	background-color: #f3480a;
+    	color: black;
+    	padding: 10px 40px;
+    	border: none;
+    	border-radius: 4px;
+    	cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+	input[type=submit]:hover {
+    	background-color: white;
+	}
+	
 	.about-top p br,
 	.wb-heading p br,
 	.aa-heading p br,
@@ -1009,38 +1009,6 @@ header-divider {
 		flex-flow: column wrap;
 		margin-left: -18px;
 		padding-top: 0;
-	}
-
-	input[type=text], select, textarea {
-    	width: 30em;
-    	padding: 8px;
-    	border: 1.5px solid #f3480a;
-    	border-radius: 4px;
-    	box-sizing: border-box;
-    	margin-top: 3px;
-    	margin-bottom: 3px;
-    	resize: vertical;
-		background-color: transparent;
-		color: white;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-flow: row wrap;
-	}
-	input[type=submit] {
-    	background-color: #f3480a;
-    	color: black;
-    	padding: 10px 40px;
-    	border: none;
-    	border-radius: 4px;
-    	cursor: pointer;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-flow: row wrap;
-	}
-	input[type=submit]:hover {
-    	background-color: white;
 	}
 
 /* -------------------- HEADER CONTENT STYLES -------------------- */
@@ -1395,14 +1363,12 @@ header-divider {
 		padding: 10px 10px;
 		float: right;
 		margin-top: 0;
-		margin: -60px 0;
-		margin-bottom: 30px;
+		margin: -40px 0;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-flow: row wrap;
-		margin-left: 230px;
-		
+		margin-left: 10px;
 	}
 	
 	.column {
@@ -1725,37 +1691,6 @@ header-divider {
 		align-items: center;
 		flex-flow: row wrap;
 	}
-	
-	.countup {
-  		margin: 0 10px;
-		margin-bottom: 30px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-flow: row wrap;
-	}
-	.countup .timeel {
-  		display: inline-block;
-  		background: transparent;
-  		margin: 0;
-  		color: white;
-  		min-width: 2rem;
-  		border-radius: 0 0 0 0;
-		font-family: 'Poiret One', cursive;
-    	font-size: 4em;
-    	text-shadow: 2px 2px 4px #000000;
-		font-weight: bold;
-	}
-	.countup span[class*="timeRef"] {
-  		border-radius: 0 0 0 0;
-  		margin-left: 0;
-  		background: transparent;
-  		color: #f3480a;
-		font-family: 'Poiret One', cursive;
-    	font-size: 1.5em;
-		font-weight: bold;
-    	text-shadow: 2px 2px 4px #000000;
-	}
 
 /* -------------------- FOOTER CONTENT STYLES -------------------- */
 
@@ -1772,7 +1707,6 @@ header-divider {
 	.service-social,
 	.about-social,
 	.contact-social,
-	.wb-social,
 	.aa-social,
 	.church-social,
 	.sx-social {
@@ -1781,6 +1715,17 @@ header-divider {
 		align-items: center;
 		flex-flow: row wrap;
 		margin-left: -45px;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		position: relative;
+	}
+	
+	.wb-social {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-right: 200px;
 		margin-top: 50px;
 		margin-bottom: 50px;
 		position: relative;
@@ -1840,6 +1785,30 @@ header-divider {
   		background-size: cover;
 	}
 	
+	input[type=text], select, textarea {
+    	width: 680px;
+    	padding: 8px;
+    	border: 1.5px solid #f3480a;
+    	border-radius: 4px;
+    	box-sizing: border-box;
+    	margin-top: 3px;
+    	margin-bottom: 3px;
+    	resize: vertical;
+		background-color: transparent;
+		color: white;
+	}
+	input[type=submit] {
+    	background-color: #f3480a;
+    	color: black;
+    	padding: 12px 50px;
+    	border: none;
+    	border-radius: 4px;
+    	cursor: pointer;
+	}
+	input[type=submit]:hover {
+    	background-color: white;
+	}
+	
 	.about-top p br,
 	.wb-heading p br,
 	.aa-heading p br,
@@ -1869,30 +1838,6 @@ header-divider {
 		justify-content: center;
 		align-items: center;
 		flex-flow: row wrap;
-	}
-	
-	input[type=text], select, textarea {
-    	width: 680px;
-    	padding: 8px;
-    	border: 1.5px solid #f3480a;
-    	border-radius: 4px;
-    	box-sizing: border-box;
-    	margin-top: 3px;
-    	margin-bottom: 3px;
-    	resize: vertical;
-		background-color: transparent;
-		color: white;
-	}
-	input[type=submit] {
-    	background-color: #f3480a;
-    	color: black;
-    	padding: 12px 50px;
-    	border: none;
-    	border-radius: 4px;
-    	cursor: pointer;
-	}
-	input[type=submit]:hover {
-    	background-color: white;
 	}
 
 	.sidenav {
@@ -2290,17 +2235,16 @@ header-divider {
 	}
 	
 	.form-container {
-		width: 700px;
+		width: 655px;
 		padding: 10px 10px;
 		float: right;
 		margin-top: 0;
-		margin: -200px 0;
-		margin-bottom: 150px;
+		margin: 0 0;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-flow: row wrap;
-		margin-left: 350px;
+		margin-left: 10px;
 	}
 	
 	.column img {
@@ -2465,7 +2409,7 @@ header-divider {
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: row wrap;
-		margin-bottom: 50px;
+		margin-bottom: 0;
 	}
 
 	.wb-brief,
@@ -2615,37 +2559,6 @@ header-divider {
 		align-items: center;
 		flex-flow: row wrap;
 		margin: 5px 5px;
-	}
-	
-	.countup {
-  		margin: 0 10px;
-		margin-bottom: 30px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-flow: row wrap;
-	}
-	.countup .timeel {
-  		display: inline-block;
-  		background: transparent;
-  		margin: 0;
-  		color: white;
-  		min-width: 2rem;
-  		border-radius: 0 0 0 0;
-		font-family: 'Poiret One', cursive;
-    	font-size: 4em;
-    	text-shadow: 2px 2px 4px #000000;
-		font-weight: bold;
-	}
-	.countup span[class*="timeRef"] {
-  		border-radius: 0 0 0 0;
-  		margin-left: 0;
-  		background: transparent;
-  		color: #f3480a;
-		font-family: 'Poiret One', cursive;
-    	font-size: 1.5em;
-		font-weight: bold;
-    	text-shadow: 2px 2px 4px #000000;
 	}
 
 /* -------------------- BOTTOM CONTENT STYLES -------------------- */
