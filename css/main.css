@@ -107,6 +107,14 @@ html {
   	background-size: cover;
 }
 
+.about-top p br,
+.wb-heading p br,
+.aa-heading p br,
+.church-heading p br,
+.sx-heading p br {
+	display: none;
+}
+
 header-divider,
 footer {
 	display: flex;
@@ -217,7 +225,6 @@ input[type=submit]:hover {
 header-divider {
 	width: 100%;
 	height: 100%;
-    overflow: scroll;
 	position: absolute;
     top: 0;
     left: 0;
@@ -241,6 +248,16 @@ header-divider {
 	align-items: center;
 	flex-flow: row wrap;
 	position: relative;
+}
+
+.wb-heading,
+.aa-heading,
+.church-heading,
+.sx-heading {
+	margin: 0 0;
+	width: 100%;
+	height: auto;
+	margin-top: 50px;
 }
 
 .wb-heading h2,
@@ -316,6 +333,21 @@ header-divider {
 	margin-bottom: 0;
 }
 
+.wbheading-container,
+.aaheading-container,
+.churchheading-container,
+.sxheading-container {
+	padding: 10px 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	margin: -90px 0;
+	position: relative;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
 .wb-container,
 .logo-column,
 .wbcolor-scheme,
@@ -388,12 +420,13 @@ header-divider {
     margin: 0 10px;
     color: white; 
     text-align: justify;
+	word-spacing: -2.5px;
     clear: both;
 	font-weight: normal;
     text-shadow: 2px 2px 2px #000000;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: flex-start;
+	align-items: flex-start;
 	flex-flow: row wrap;
 }
 
@@ -405,37 +438,6 @@ header-divider {
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
-}
-
-.countup {
-  	margin: 0 10px;
-	margin-bottom: 30px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: row wrap;
-}
-.countup .timeel {
-  	display: inline-block;
-  	background: transparent;
-  	margin: 0;
-  	color: white;
-  	min-width: 2rem;
-  	border-radius: 0 0 0 0;
-	font-family: 'Poiret One', cursive;
-    font-size: 4em;
-    text-shadow: 2px 2px 4px #000000;
-	font-weight: bold;
-}
-.countup span[class*="timeRef"] {
-  	border-radius: 0 0 0 0;
-  	margin-left: 0;
-  	background: transparent;
-  	color: #f3480a;
-	font-family: 'Poiret One', cursive;
-    font-size: 1.75em;
-	font-weight: bold;
-    text-shadow: 2px 2px 4px #000000;
 }
 
 .skills {
@@ -674,6 +676,37 @@ header-divider {
 	flex-flow: row wrap;
 }
 
+.countup {
+  	margin: 0 10px;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+}
+.countup .timeel {
+  	display: inline-block;
+  	background: transparent;
+  	margin: 0;
+  	color: white;
+  	min-width: 2rem;
+  	border-radius: 0 0 0 0;
+	font-family: 'Poiret One', cursive;
+    font-size: 4em;
+    text-shadow: 2px 2px 4px #000000;
+	font-weight: bold;
+}
+.countup span[class*="timeRef"] {
+  	border-radius: 0 0 0 0;
+  	margin-left: 0;
+  	background: transparent;
+  	color: #f3480a;
+	font-family: 'Poiret One', cursive;
+   	font-size: 1.5em;
+	font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+}
+
 
 /* -------------------- FOOTER CONTENT STYLES -------------------- */
 
@@ -796,7 +829,6 @@ header-divider {
 
 
 
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -886,7 +918,1851 @@ header-divider {
    Modify as content requires.
    ========================================================================== */
 
+@media only screen and (min-width: 768px) {
+/*Desktop styles here*/
+/* -------------------- BASE CONTENT STYLES -------------------- */
 
+	html {
+		width: 100%;
+		font-size: 16px;
+		background: url("https://i.postimg.cc/WbMGBJ7R/bw-bg-biggest.png") no-repeat center center fixed; 
+  		background-size: cover;
+	}
+	
+	.about-top p br,
+	.wb-heading p br,
+	.aa-heading p br,
+	.church-heading p br,
+	.sx-heading p br {
+		display: none;
+	}
+	
+	header-divider,
+	footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+
+	.content-wrapper, 
+	.portfolio-wrapper,
+	.service-wrapper,
+	.about-wrapper,
+	.contact-wrapper,
+	.wb-wrapper,
+	.aa-wrapper,
+	.church-wrapper,
+	.sx-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+
+	.sidenav {
+    	height: 100%;
+    	width: 0;
+    	position: fixed;
+    	z-index: 1;
+    	top: 0;
+    	right: 0;
+    	background-color: rgb(0,0,0);
+		background-color: rgba(0,0,0, 0.8);
+    	overflow-x: hidden;
+    	transition: 0.5s;
+    	padding-top: 10px; 
+	}
+	.sidenav a {
+    	font-family: 'Poiret One', cursive;
+    	padding: 8px 8px 8px 25px;
+    	text-decoration: none;
+    	font-size: 1.5625em;
+    	color: rgb(243, 72, 10);
+    	display: block;
+    	transition: 0.3s;
+    	font-weight: bold;
+	} 
+	.sidenav a:hover {
+    	color: white;
+	}
+	.navigation span {
+		width: 60%;
+    	color: rgb(243, 72, 10);
+    	float: right;
+		margin: 0 -40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column wrap;
+		padding-top: 0;
+		margin-right: -190px;
+	}
+
+	.logo img {
+		width: 40%;
+		margin: -90px 0;
+		float: left;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column wrap;
+		margin-left: -18px;
+		padding-top: 0;
+	}
+
+	input[type=text], select, textarea {
+    	width: 30em;
+    	padding: 8px;
+    	border: 1.5px solid #f3480a;
+    	border-radius: 4px;
+    	box-sizing: border-box;
+    	margin-top: 3px;
+    	margin-bottom: 3px;
+    	resize: vertical;
+		background-color: transparent;
+		color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+	input[type=submit] {
+    	background-color: #f3480a;
+    	color: black;
+    	padding: 10px 40px;
+    	border: none;
+    	border-radius: 4px;
+    	cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+	input[type=submit]:hover {
+    	background-color: white;
+	}
+
+/* -------------------- HEADER CONTENT STYLES -------------------- */
+
+	header-divider {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+    	top: 0;
+    	left: 0;
+		display: block;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+
+	.portfolio-heading,
+	.service-heading,
+	.about-heading,
+	.contact-heading {
+		padding: 10px 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin: 0px 0;
+		position: relative;
+		margin-bottom: 0;
+		margin-top: -200px;
+	}
+	
+	.portfolio-heading h2,
+	.service-heading h2,
+	.contact-heading h2 {
+		font-family: 'neuropol-nova', sans-serif;
+    	font-size: 2.25em;
+    	color: white;
+    	margin: 0 460px;
+    	text-shadow: 2px 2px 4px #000000;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin-top: 350px;
+		margin-left: -70px;
+	}
+	
+	.about-heading h2 {
+		font-family: 'neuropol-nova', sans-serif;
+    	font-size: 2.25em;
+    	color: white;
+    	margin: 0 460px;
+    	text-shadow: 2px 2px 4px #000000;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin-top: 350px;
+		margin-left: -90px;
+	}
+
+	.wb-heading,
+	.aa-heading,
+	.church-heading,
+	.sx-heading {
+		width: 350px;
+		padding: 0 -80px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin: 40px 90px;
+		text-align: justify;
+		margin-bottom: 0;
+		margin-top: 90px;
+	}
+	
+	.wb-heading h2,
+	.aa-heading h2,
+	.church-heading h2,
+	.sx-heading h2 {
+		font-family: 'neuropol-nova', sans-serif;
+    	font-size: 1.5em;
+    	color: white;
+    	margin: 60px -20px;
+    	text-shadow: 2px 2px 4px #000000;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		padding-left: 80px;
+		margin-top: 80px;
+		text-align: justify;
+	}
+	.wb-heading h3,
+	.church-heading h3 {
+		font-family: 'Poiret One', cursive;
+		font-size: 1.5em;
+    	font-weight: bold;
+		text-shadow: 2px 2px 4px #000000;
+		color: #f3480a;
+		margin: 10px -35px;
+		text-align: justify;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin-top: -60px;
+		margin-left: 60px;
+	}	
+	.sx-heading h3 {
+		font-family: 'Poiret One', cursive;
+		font-size: 1.5em;
+    	font-weight: bold;
+		text-shadow: 2px 2px 4px #000000;
+		color: #f3480a;
+		margin: 0 -10px;
+		text-align: left;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin-top: -60px;
+		margin-left: 60px;
+	}
+	.aa-heading h3 {
+		font-family: 'Poiret One', cursive;
+		font-size: 1.5em;
+    	font-weight: bold;
+		text-shadow: 2px 2px 4px #000000;
+		color: #f3480a;
+		margin: 10px -20px;
+		text-align: left;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin-top: -60px;
+		margin-left: 60px;
+	}
+	.wb-heading p {
+		font-family: 'Poiret One', cursive;
+		font-size: 1.25em;
+    	font-weight: normal;
+		text-shadow: 2px 2px 4px #000000;
+		color: white;
+		text-align: justify;
+		margin: 0 -5px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin-left: 60px;
+		
+	}	
+	.sx-heading p {
+		font-family: 'Poiret One', cursive;
+		font-size: 1.25em;
+    	font-weight: normal;
+		text-shadow: 2px 2px 4px #000000;
+		color: white;
+		text-align: left;
+		margin: 0 -50px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin-left: 60px;
+		
+	}
+	.aa-heading p {
+		font-family: 'Poiret One', cursive;
+		font-size: 1.25em;
+    	font-weight: normal;
+		text-shadow: 2px 2px 4px #000000;
+		color: white;
+		padding: 0 0;
+		margin: -10px -45px;
+		text-align: left;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: 60px;
+	}
+	.church-heading p {
+		font-family: 'Poiret One', cursive;
+		font-size: 1.25em;
+    	font-weight: normal;
+		text-shadow: 2px 2px 4px #000000;
+		color: white;
+		padding: 0 0;
+		margin: 0 -55px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: 60px;
+		text-align: left;
+	}
+
+/* -------------------- MAIN CONTENT STYLES -------------------- */
+
+	.hero-area img {
+		margin: 220px 0;
+		width: 100%;
+		height: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+	
+	.vl {
+  		border-left: 3px solid #f3480a;
+  		height: 450px;
+  		position: absolute;
+  		left: 30%;
+  		margin-left: -3px;
+  		top: 175px;
+		float: left;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+
+	.portfolio-container {
+		width: 500px;
+		padding: 10px 10px;
+		float: right;
+		margin-top: 0;
+		margin: 0 0;
+		margin-bottom: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: 30px;
+		
+	}
+	
+	.service-container,
+	.about-container {
+		width: 500px;
+		padding: 10px 10px;
+		float: right;
+		margin-top: 0;
+		margin: -60px 0;
+		margin-bottom: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: 230px;
+		
+	}
+
+	.contact-container {
+		width: 500px;
+		padding: 10px 10px;
+		float: right;
+		margin-top: 0;
+		margin: -40px 0;
+		margin-bottom: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: 230px;
+		
+	}
+	
+	.wb-container {
+		width: 500px;
+		padding: 10px 10px;
+		float: right;
+		margin-top: 0;
+		margin: -410px 0;
+		margin-bottom: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: 230px;
+		
+	}
+	
+	.church-container {
+		width: 500px;
+		padding: 10px 10px;
+		float: right;
+		margin-top: 0;
+		margin: -415px 0;
+		margin-bottom: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: 230px;
+		
+	}
+	
+	.aa-container {
+		width: 500px;
+		padding: 10px 10px;
+		float: right;
+		margin-top: 0;
+		margin: -304px 0;
+		margin-bottom: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: 230px;
+		
+	}
+	
+	.sx-container {
+		width: 500px;
+		padding: 10px 10px;
+		float: right;
+		margin-top: 0;
+		margin: -575px 0;
+		margin-bottom: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: 230px;
+	}
+	
+	.wbheading-container,
+	.aaheading-container,
+	.churchheading-container,
+	.sxheading-container {
+		width: 400px;
+		padding: 10px 10px;
+		float: left;
+		margin-top: 0;
+		margin: 0 340px;
+		margin-bottom: 30px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin-left: -300px;
+	}
+	
+	.form-container {
+		width: 500px;
+		padding: 10px 10px;
+		float: right;
+		margin-top: 0;
+		margin: -60px 0;
+		margin-bottom: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: 230px;
+		
+	}
+	
+	.column {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-top: 0;
+		box-sizing: border-box;
+		margin: -55px 85px;
+		position: relative;
+	}
+	
+	.column img {
+		width: 100%;
+  		margin-top: 8px;
+  		vertical-align: middle;
+		border: 1px solid #f3480a;
+  		border-radius: 2px;
+  		padding: 20px;
+		margin: 5px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+
+	.coding-icon,
+	.design-icon {
+		margin: 15px 0;
+		margin-top: 0px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+	}
+ 
+	.coding-icon p,
+	.design-icon p {
+    	font-family: 'Poiret One', cursive;
+    	font-size: 1.375em;
+    	margin: 0 10px;
+    	text-align: justify;
+    	color: white;
+		font-weight: normal;
+    	text-shadow: 2px 2px 2px #000000;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+	}	
+
+	.design-icon span p,
+	.coding-icon span p {
+    	font-family: 'Poiret One', cursive;
+    	font-size: 1.375em;
+    	color: #f3480a;
+		font-weight: bold;
+	}
+
+	.about-top p {
+    	font-family: 'Poiret One', cursive;
+    	font-size: 1.375em;
+    	margin: 0 10px;
+    	color: white; 
+    	text-align: justify;
+		word-spacing: normal;
+    	clear: both;
+		font-weight: normal;
+    	text-shadow: 2px 2px 2px #000000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+
+	.about-top img {
+    	margin: -90px 0;
+    	width: 100%;
+    	height: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+
+	.skills {
+		width: 100%;
+		margin: 0 10px;
+		color: white;
+		font-family: 'Poiret One', cursive;
+		list-style: none;
+		padding: 0;
+		font-size: 1.125em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-bottom: 50px;
+	}
+
+	.skills ul li {
+		display: inline;
+	}
+
+	.bar {
+		background: white;
+		width: 18em;
+		height: 2px;
+		border: 1px solid rgba(0,0,0,0,3);
+		border-radius: 3px;
+		box-shadow: 0 0 10px #f3480a; 
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+	}
+
+	.bar span {
+		height: 2px;
+		float: left;
+		background: #f3480a;
+	}
+
+	.html {
+		width: 90%;
+		animation: html 10s;
+	}
+	.css3 {
+		width: 90%;
+		animation: css 10s;
+	}
+	.javascript {
+		width: 50%;
+		animation: javascript 10s;
+	}
+	.photoshop {
+		width: 85%;
+		animation: photoshop 10s;
+	}
+	.illustrator {
+		width: 80%;
+		animation: illustrator 10s;
+	}
+	.indesign {
+		width: 75%;
+		animation: indesign 10s;
+	}
+
+	.contact-main h3 {
+		font-family: 'Poiret One', cursive;
+		font-size: 1.5em;
+    	font-weight: bold;
+		text-shadow: 2px 2px 4px #000000;
+		color: #f3480a;
+		margin: 0px 10px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin-top: -20px;
+	}
+	.contact-main p {
+		font-family: 'Poiret One', cursive;
+    	font-size: 1.37em;
+		text-align: justify;
+    	color: white;
+    	text-shadow: 2px 2px 2px #000000;
+		margin: 0px 10px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin-bottom: 50px;
+	}
+
+	.wb-brief,
+	.wb-approach,
+	.text,
+	.end-prod,
+	.aa-brief,
+	.aa-approach,
+	.aa-website,
+	.church-brief,
+	.church-approach,
+	.sx-brief,
+	.sx-approach {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin-top: 10px;
+	}
+
+	.wb-brief h3, 
+	.wb-approach h3,
+	.end-prod h3,
+	.aa-brief h3,
+	.aa-approach h3,
+	.aa-website h3,
+	.church-brief h3,
+	.church-approach h3,
+	.sx-brief h3,
+	.sx-approach h3,
+	.sx-website h3 {
+		font-family: 'Poiret One', cursive;
+		font-size: 1.5em;
+    	font-weight: bold;
+		text-shadow: 2px 2px 4px #000000;
+		color: #f3480a;
+		margin: 0 10px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+	}
+	.wb-brief p,
+	.wb-approach p,
+	.end-prod p,
+	.aa-brief p,
+	.aa-approach p,
+	.aa-website p,
+	.church-brief p,
+	.church-approach p,
+	.sx-brief p,
+	.sx-approach p,
+	.sx-website p {
+		font-family: 'Poiret One', cursive;
+		font-size: 1.125em;
+    	font-weight: normal;
+		text-shadow: 2px 2px 4px #000000;
+		color: white;
+		text-align: justify;
+		margin: 0 15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}	
+
+	.text p {
+		font-family: 'Poiret One', cursive;
+		font-size: 1.125em;
+    	font-weight: normal;
+		text-shadow: 2px 2px 4px #000000;
+		color: white;
+		text-align: justify;
+		margin: 0 15px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+	}
+
+	.text p span {
+		color: #f3480a;
+		font-weight: bold;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+	}
+
+	.logo-column img,
+	.typo-column img,
+	.sxicon-column img {
+		margin-top: 8px;
+  		vertical-align: middle;
+		border: 1px solid #f3480a;
+  		border-radius: 2px;
+  		padding: 42px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+
+	.wbcolor-scheme img,
+	.aacolor-scheme img,
+	.aasite-imagery img,
+	.churchcolor-scheme img,
+	.sxcolor-scheme img {
+		width: 85%;
+		margin-top: 8px;
+  		vertical-align: middle;
+		border: 1px solid #f3480a;
+  		border-radius: 2px;
+  		padding: 12px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+
+	.churchlogo-column img {
+		width: 75%;
+		margin-top: 8px;
+  		vertical-align: middle;
+		border: 1px solid #f3480a;
+  		border-radius: 2px;
+  		padding: 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+
+	.icon-column img,
+	.hero-column img,
+	.churchicon-column img {
+		margin-top: 8px;
+  		vertical-align: middle;
+		border: 1px solid #f3480a;
+  		border-radius: 2px;
+  		padding: 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+	
+	.countup {
+  		margin: 0 10px;
+		margin-bottom: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+	.countup .timeel {
+  		display: inline-block;
+  		background: transparent;
+  		margin: 0;
+  		color: white;
+  		min-width: 2rem;
+  		border-radius: 0 0 0 0;
+		font-family: 'Poiret One', cursive;
+    	font-size: 4em;
+    	text-shadow: 2px 2px 4px #000000;
+		font-weight: bold;
+	}
+	.countup span[class*="timeRef"] {
+  		border-radius: 0 0 0 0;
+  		margin-left: 0;
+  		background: transparent;
+  		color: #f3480a;
+		font-family: 'Poiret One', cursive;
+    	font-size: 1.5em;
+		font-weight: bold;
+    	text-shadow: 2px 2px 4px #000000;
+	}
+
+/* -------------------- FOOTER CONTENT STYLES -------------------- */
+
+	.social {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: -30px;
+		margin-top: -80px;
+	}
+
+	.portfolio-social,
+	.service-social,
+	.about-social,
+	.contact-social,
+	.wb-social,
+	.aa-social,
+	.church-social,
+	.sx-social {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: -45px;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		position: relative;
+	}
+	
+	.social ul,
+	.portfolio-social ul,
+	.service-social ul,
+	.about-social ul,
+	.contact-social ul,
+	.wb-social ul,
+	.aa-social ul,
+	.church-social ul,
+	.sx-social ul {
+    	list-style: none;
+	}
+
+	.social ul li,
+	.portfolio-social ul li,
+	.service-social ul li,
+	.about-social ul li,
+	.contact-social ul li,
+	.wb-social ul li,
+	.aa-social ul li,
+	.church-social ul li,
+	.sx-social ul li {
+		display: inline-flex;
+	}
+
+	.footer {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		height: auto;
+		width: 100%;
+		color: #f3480a;
+		background-color: black;
+		font-family: 'Poiret One', cursive;
+		font-size: 1em;
+		line-height: 1;
+		font-weight: bold;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+
+@media only screen and (min-width: 1200px) {
+/*Desktop styles here*/
+/* -------------------- BASE CONTENT STYLES -------------------- */
+
+	html {
+		width: 100%;
+		font-size: 16px;
+		background: url("https://i.postimg.cc/WbMGBJ7R/bw-bg-biggest.png") no-repeat center center fixed; 
+  		background-size: cover;
+	}
+	
+	.about-top p br,
+	.wb-heading p br,
+	.aa-heading p br,
+	.church-heading p br,
+	.sx-heading p br {
+		display: flex;
+	}
+	
+	header-divider,
+	footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+
+	.content-wrapper, 
+	.portfolio-wrapper,
+	.service-wrapper,
+	.about-wrapper,
+	.contact-wrapper,
+	.wb-wrapper,
+	.aa-wrapper,
+	.church-wrapper,
+	.sx-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+	
+	input[type=text], select, textarea {
+    	width: 680px;
+    	padding: 8px;
+    	border: 1.5px solid #f3480a;
+    	border-radius: 4px;
+    	box-sizing: border-box;
+    	margin-top: 3px;
+    	margin-bottom: 3px;
+    	resize: vertical;
+		background-color: transparent;
+		color: white;
+	}
+	input[type=submit] {
+    	background-color: #f3480a;
+    	color: black;
+    	padding: 12px 50px;
+    	border: none;
+    	border-radius: 4px;
+    	cursor: pointer;
+	}
+	input[type=submit]:hover {
+    	background-color: white;
+	}
+
+	.sidenav {
+	    height: 100%;
+	    width: 0;
+	    position: fixed;
+	    z-index: 1;
+	    top: 0;
+	    right: 0;
+	    background-color: rgb(0,0,0);
+		background-color: rgba(0,0,0, 0.8);
+	    overflow-x: hidden;
+	    transition: 0.5s;
+	    padding-top: 10px; 
+	}
+	.sidenav a {
+    	font-family: 'Poiret One', cursive;
+    	padding: 8px 8px 8px 25px;
+    	text-decoration: none;
+    	font-size: 25px;
+    	color: rgb(243, 72, 10);
+    	display: block;
+    	transition: 0.3s;
+    	font-weight: bold;
+	} 
+	.sidenav a:hover {
+    	color: white;
+	}
+	.navigation span {
+    	color: rgb(243, 72, 10);
+    	float: right;
+    	margin: 0 0;
+		margin-left: 850px;
+		position: fixed;
+	} 
+	.logo img {
+		width: 21%;
+		top: 0;
+		left: 0;
+		margin: -80px 10px;
+		margin-bottom: 400px;
+		position: fixed;
+	}
+
+/* -------------------- HEADER CONTENT STYLES -------------------- */
+
+	header-divider {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+    	top: 0;
+    	left: 0;
+		display: block; 
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+
+	.portfolio-heading,
+	.service-heading,
+	.about-heading,
+	.contact-heading {
+		padding: 10px 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin: 0px 0;
+		position: relative;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+	
+	.portfolio-heading h2 {
+		font-family: 'neuropol-nova', sans-serif;
+    	font-size: 3.25em;
+    	color: white;
+    	margin: 0 0;
+    	text-shadow: 2px 2px 4px #000000;
+		margin-top: -200px;
+		margin-left: 90px;
+		position: fixed;
+	}
+	
+	.service-heading h2 {
+		font-family: 'neuropol-nova', sans-serif;
+    	font-size: 3.25em;
+    	color: white;
+    	margin: 0 0;
+    	text-shadow: 2px 2px 4px #000000;
+		margin-top: 160px;
+		margin-left: -460px;
+		position: fixed;
+	}
+	
+	.about-heading h2 {
+		font-family: 'neuropol-nova', sans-serif;
+    	font-size: 3.25em;
+    	color: white;
+    	margin: 0 0;
+    	text-shadow: 2px 2px 4px #000000;
+		margin-top: 165px;
+		margin-left: -485px;
+		position: fixed;
+	}
+	
+	.contact-heading h2 {
+		font-family: 'neuropol-nova', sans-serif;
+    	font-size: 3.25em;
+    	color: white;
+    	margin: 0 0;
+    	text-shadow: 2px 2px 4px #000000;
+		margin-top: 170px;
+		margin-left: -475px;
+		position: fixed;
+	}
+
+	.wb-heading,
+	.aa-heading {
+		padding: 0 0;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin: 0 0;
+		text-align: justify;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+	
+	.sx-heading {
+		padding: 0 0;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin: 0 0;
+		text-align: justify;
+		margin-bottom: 150px;
+		margin-top: 0;
+	}
+	
+	.church-heading {
+		padding: 0 0;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin: 0 0;
+		text-align: justify;
+		margin-bottom: 0;
+		margin-top: 20px;
+	}
+	
+	.wb-heading h2,
+	.aa-heading h2,
+	.sx-heading h2 {
+		font-family: 'neuropol-nova', sans-serif;
+    	font-size: 2.3em;
+    	color: white;
+    	margin: 0 -40px;
+    	text-shadow: 2px 2px 4px #000000;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		padding-left: 0;
+		margin-top: 130px;
+		text-align: justify;
+		position: fixed;
+	}
+	
+	.church-heading h2 {
+		font-family: 'neuropol-nova', sans-serif;
+    	font-size: 2.3em;
+    	color: white;
+    	margin: 0 -40px;
+		line-height: 25px;
+    	text-shadow: 2px 2px 4px #000000;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		padding-left: 0;
+		margin-top: 130px;
+		text-align: justify;
+		position: fixed;
+	}
+	.wb-heading h3,
+	.church-heading h3,
+	.aa-heading h3,
+	.sx-heading h3 {
+		font-family: 'Poiret One', cursive;
+		font-size: 1.5em;
+    	font-weight: bold;
+		text-shadow: 2px 2px 4px #000000;
+		color: #f3480a;
+		margin: 0 0;
+		text-align: justify;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin-top: 180px;
+		margin-left: -42px;
+		position: fixed;
+	}	
+
+	.wb-heading p,
+	.aa-heading p,
+	.church-heading p {
+		font-family: 'Poiret One', cursive;
+		font-size: 1.125em;
+    	font-weight: normal;
+		text-shadow: 2px 2px 4px #000000;
+		color: white;
+		text-align: justify;
+		margin: 0 0;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin-left: -40px;
+		margin-top: 250px;
+		position: fixed;
+	}	
+	
+	.sx-heading p {
+		font-family: 'Poiret One', cursive;
+		font-size: 1.125em;
+    	font-weight: normal;
+		text-shadow: 2px 2px 4px #000000;
+		color: white;
+		text-align: justify;
+		margin: 0 0;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin-left: -42px;
+		margin-top: 280px;
+		position: fixed;
+	}
+
+/* -------------------- MAIN CONTENT STYLES -------------------- */
+
+	.hero-area img {
+		margin: 20px 140px;
+		width: 80%;
+		height: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+	
+	.vl {
+  		border-left: 3px solid #f3480a;
+  		height: 450px;
+  		position: absolute;
+  		left: 30%;
+  		margin-left: -3px;
+  		top: 160px;
+		float: left;
+	}
+
+	.portfolio-container {
+		width: 750px;
+		padding: 10px 10px;
+		float: right;
+		margin-top: 0;
+		margin: 200px 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: 240px;
+		margin-bottom: 150px;
+		
+	}
+	
+	.service-container {
+		width: 750px;
+		padding: 10px 10px;
+		float: right;
+		margin-top: 0;
+		margin: 125px 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: 450px;
+		margin-bottom: 150px;
+	}
+	
+	.about-container {
+		width: 750px;
+		padding: 10px 10px;
+		float: right;
+		margin-top: 0;
+		margin: 125px 70px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: 450px;
+		margin-bottom: 50px;
+	}
+
+	.contact-container {
+		width: 750px;
+		padding: 10px 10px;
+		float: right;
+		margin-top: 0;
+		margin: 145px 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: 450px;
+		margin-bottom: 150px;
+	}
+	
+	.wb-container {
+		width: 750px;
+		padding: 10px 10px;
+		float: right;
+		margin-top: 0;
+		margin: 77px 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: 450px;
+		margin-bottom: 150px;
+	}
+	
+	.church-container {
+		width: 750px;
+		padding: 10px 10px;
+		float: right;
+		margin-top: 0;
+		margin: 65px 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: 450px;
+		margin-bottom: 150px;
+	}
+	
+	.aa-container {
+		width: 750px;
+		padding: 10px 10px;
+		float: right;
+		margin-top: 0;
+		margin: 83px 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: 450px;
+		margin-bottom: 150px;
+	}
+	
+	.sx-container {
+		width: 750px;
+		padding: 10px 10px;
+		float: right;
+		margin-top: 0;
+		margin: -70px 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: 450px;
+		margin-bottom: 150px;
+	}
+	
+	.wbheading-container,
+	.aaheading-container,
+	.churchheading-container,
+	.sxheading-container {
+		width: 400px;
+		padding: 10px 10px;
+		float: left;
+		margin-top: 0;
+		margin: 0 340px;
+		margin-bottom: 30px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin-left: -300px;
+	}
+	
+	.form-container {
+		width: 700px;
+		padding: 10px 10px;
+		float: right;
+		margin-top: 0;
+		margin: -200px 0;
+		margin-bottom: 150px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-left: 350px;
+	}
+	
+	.column img {
+		width: 85%;
+  		margin-top: 8px;
+  		vertical-align: middle;
+		border: 1px solid #f3480a;
+  		border-radius: 2px;
+  		padding: 20px;
+		margin: 5px 15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+
+	.coding-icon,
+	.design-icon {
+		margin: 15px 0;
+		margin-top: 0px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+	}
+ 
+	.coding-icon p,
+	.design-icon p {
+    	font-family: 'Poiret One', cursive;
+    	font-size: 1.375em;
+    	margin: 0 10px;
+    	text-align: justify;
+    	color: white;
+		font-weight: normal;
+    	text-shadow: 2px 2px 2px #000000;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+	}	
+
+	.design-icon span p,
+	.coding-icon span p {
+    	font-family: 'Poiret One', cursive;
+    	font-size: 1.375em;
+    	color: #f3480a;
+		font-weight: bold;
+	}
+
+	.about-top p {
+    	font-family: 'Poiret One', cursive;
+    	font-size: 1.375em;
+    	margin: 0 10px;
+    	color: white; 
+    	text-align: justify;
+    	clear: both;
+		font-weight: normal;
+    	text-shadow: 2px 2px 2px #000000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+
+	.about-top img {
+    	margin: -110px -60px;
+    	width: 52%;
+		float: right;
+		margin-left: 400px;
+		margin-bottom: -280px;
+    	height: auto;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+		flex-flow: row wrap;
+	}
+
+	.skills {
+		width: 100%;
+		margin: 0 10px;
+		color: white;
+		font-family: 'Poiret One', cursive;
+		list-style: none;
+		padding: 0;
+		font-size: 1.125em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin-bottom: 150px;
+	}
+
+	.skills ul li {
+		display: inline;
+	}
+
+	.bar {
+		background: white;
+		width: 25em;
+		height: 2px;
+		border: 1px solid rgba(0,0,0,0,3);
+		border-radius: 3px;
+		box-shadow: 0 0 10px #f3480a; 
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+	}
+
+	.bar span {
+		height: 2px;
+		float: left;
+		background: #f3480a;
+	}
+
+	.html {
+		width: 90%;
+		animation: html 10s;
+	}
+	.css3 {
+		width: 90%;
+		animation: css 10s;
+	}
+	.javascript {
+		width: 50%;
+		animation: javascript 10s;
+	}
+	.photoshop {
+		width: 85%;
+		animation: photoshop 10s;
+	}
+	.illustrator {
+		width: 80%;
+		animation: illustrator 10s;
+	}
+	.indesign {
+		width: 75%;
+		animation: indesign 10s;
+	}
+
+	.contact-main h3 {
+		font-family: 'Poiret One', cursive;
+		font-size: 1.5em;
+    	font-weight: bold;
+		text-shadow: 2px 2px 4px #000000;
+		color: #f3480a;
+		margin: 0px 10px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin-top: -20px;
+	}
+	.contact-main p {
+		font-family: 'Poiret One', cursive;
+    	font-size: 1.37em;
+		text-align: justify;
+    	color: white;
+    	text-shadow: 2px 2px 2px #000000;
+		margin: 0px 10px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin-bottom: 50px;
+	}
+
+	.wb-brief,
+	.wb-approach,
+	.text,
+	.end-prod,
+	.aa-brief,
+	.aa-approach,
+	.aa-website,
+	.church-brief,
+	.church-approach,
+	.sx-brief,
+	.sx-approach {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin-top: 10px;
+	}
+
+	.wb-brief h3, 
+	.wb-approach h3,
+	.end-prod h3,
+	.aa-brief h3,
+	.aa-approach h3,
+	.aa-website h3,
+	.church-brief h3,
+	.church-approach h3,
+	.sx-brief h3,
+	.sx-approach h3,
+	.sx-website h3 {
+		font-family: 'Poiret One', cursive;
+		font-size: 1.5em;
+    	font-weight: bold;
+		text-shadow: 2px 2px 4px #000000;
+		color: #f3480a;
+		margin: 0 10px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+	}
+	.wb-brief p,
+	.wb-approach p,
+	.end-prod p,
+	.aa-brief p,
+	.aa-approach p,
+	.aa-website p,
+	.church-brief p,
+	.church-approach p,
+	.sx-brief p,
+	.sx-approach p,
+	.sx-website p {
+		font-family: 'Poiret One', cursive;
+		font-size: 1.125em;
+    	font-weight: normal;
+		text-shadow: 2px 2px 4px #000000;
+		color: white;
+		text-align: justify;
+		margin: 0 15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}	
+
+	.text p {
+		font-family: 'Poiret One', cursive;
+		font-size: 1.125em;
+    	font-weight: normal;
+		text-shadow: 2px 2px 4px #000000;
+		color: white;
+		text-align: justify;
+		margin: 0 15px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+	}
+
+	.text p span {
+		color: #f3480a;
+		font-weight: bold;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+	}
+	
+	.logo-column img,
+	.typo-column img,
+	.sxicon-column img {
+		margin-top: 8px;
+  		vertical-align: middle;
+		border: 1px solid #f3480a;
+  		border-radius: 2px;
+  		padding: 37px;
+		display: flex;
+		justify-content:space-between;
+		align-items: center;
+		flex-flow: row wrap;
+		margin: 5px 5px;
+	}
+
+	.wbcolor-scheme img,
+	.aacolor-scheme img,
+	.aasite-imagery img,
+	.churchcolor-scheme img,
+	.sxcolor-scheme img {
+		width: 85%;
+		margin-top: 8px;
+  		vertical-align: middle;
+		border: 1px solid #f3480a;
+  		border-radius: 2px;
+  		padding: 34px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+
+	.churchlogo-column img {
+		width: 40%;
+		margin-top: 8px;
+  		vertical-align: middle;
+		border: 1px solid #f3480a;
+  		border-radius: 2px;
+  		padding: 23px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin: 0 5px;
+	}
+
+	.icon-column img,
+	.hero-column img,
+	.churchicon-column img {
+		margin-top: 8px;
+  		vertical-align: middle;
+		border: 1px solid #f3480a;
+  		border-radius: 2px;
+  		padding: 22px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		margin: 5px 5px;
+	}
+	
+	.countup {
+  		margin: 0 10px;
+		margin-bottom: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+	.countup .timeel {
+  		display: inline-block;
+  		background: transparent;
+  		margin: 0;
+  		color: white;
+  		min-width: 2rem;
+  		border-radius: 0 0 0 0;
+		font-family: 'Poiret One', cursive;
+    	font-size: 4em;
+    	text-shadow: 2px 2px 4px #000000;
+		font-weight: bold;
+	}
+	.countup span[class*="timeRef"] {
+  		border-radius: 0 0 0 0;
+  		margin-left: 0;
+  		background: transparent;
+  		color: #f3480a;
+		font-family: 'Poiret One', cursive;
+    	font-size: 1.5em;
+		font-weight: bold;
+    	text-shadow: 2px 2px 4px #000000;
+	}
+
+/* -------------------- BOTTOM CONTENT STYLES -------------------- */
+
+	.social {
+		margin-left: 45px;
+		margin-top: -198px;
+		margin-bottom: 70px;
+		position: absolute;
+	}
+	
+	.portfolio-social,
+	.service-social {
+		margin-left: -450px;
+		margin-top: 210px;
+		margin-bottom: 70px;
+		position: absolute;
+	}
+	
+	.about-social {
+		margin-left: -455px;
+		margin-top: 430px;
+		margin-bottom: 70px;
+		position: absolute;
+	}
+	
+	.contact-social {
+		margin-left: -455px;
+		margin-top: 180px;
+		margin-bottom: 70px;
+		position: absolute;
+	}
+	
+	.wb-social {
+		margin-left: -632px;
+		margin-top: 1170px;
+		margin-bottom: 70px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		position: absolute;
+	}
+	
+	.aa-social {
+		margin-left: -456px;
+		margin-top: 2020px;
+		margin-bottom: 70px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		position: absolute;
+	}
+	
+	.church-social {
+		margin-left: -456px;
+		margin-top: 930px;
+		margin-bottom: 70px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		position: absolute;
+	}
+	
+	.sx-social {
+		margin-left: -456px;
+		margin-top: 1250px;
+		margin-bottom: 70px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		position: absolute;
+	}
+	
+	.social ul,
+	.portfolio-social ul,
+	.service-social ul,
+	.about-social ul,
+	.contact-social ul,
+	.wb-social ul,
+	.aa-social ul,
+	.church-social ul,
+	.sx-social ul {
+    	list-style: none;
+	}
+
+	.social ul li,
+	.portfolio-social ul li,
+	.service-social ul li,
+	.about-social ul li,
+	.contact-social ul li,
+	.wb-social ul li,
+	.aa-social ul li,
+	.church-social ul li,
+	.sx-social ul li {
+		display: inline-flex;
+	}
+
+	.footer {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		height: 30px;
+		width: 100%;
+		color: #f3480a;
+		background-color: black;
+		padding: 0.01em 16px;
+		font-family: 'Poiret One', cursive;
+		font-size: 1em;
+		line-height: 1.5;
+		text-align: center;
+		font-weight: normal;
+	}
+}
 
 
 /* ==========================================================================
@@ -894,6 +2770,23 @@ header-divider {
    Inlined to avoid the additional HTTP request:
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
+
+@media screen and (max-width : 1028px ){
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
 
 @media print {
   *,
@@ -953,4 +2846,3 @@ header-divider {
     page-break-after: avoid;
   }
 }
-
