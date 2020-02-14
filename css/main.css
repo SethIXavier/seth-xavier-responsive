@@ -102,6 +102,7 @@ textarea {
 
 html {
 	width: 100%;
+	max-width: 370px;
 	font-size: 16px;
 	background: url("https://i.postimg.cc/WbMGBJ7R/bw-bg-biggest.png") no-repeat center center fixed; 
   	background-size: cover;
@@ -200,10 +201,10 @@ footer {
 	width: 40%;
     color: rgb(243, 72, 10);
     float: right;
-	margin: 0 -40px;
+	margin: 0 15px;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: flex-end;
+	align-items: flex-end;
 	flex-flow: column wrap;
 	padding-top: 0;
 }
@@ -213,8 +214,8 @@ footer {
 	margin: -60px 0;
 	float: left;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: flex-start;
+	align-items: flex-start;
 	flex-flow: column wrap;
 	margin-left: 0;
 	padding-top: 0;
@@ -256,8 +257,7 @@ header-divider {
 .sx-heading {
 	margin: 0 0;
 	width: 100%;
-	height: auto;
-	margin-top: 50px;
+	margin-top: 70px;
 }
 
 .wb-heading h2,
@@ -267,11 +267,11 @@ header-divider {
 	font-family: 'neuropol-nova', sans-serif;
     font-size: 1.5em;
     color: white;
-    margin: 60px 85px;
+    margin: 60px 12px;
     text-shadow: 2px 2px 4px #000000;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: flex-start;
+	align-items: flex-start;
 	flex-flow: row wrap;
 }
 .wb-heading h3,
@@ -286,7 +286,7 @@ header-divider {
 	margin: 0 10px;
 	display: flex;
 	justify-content: flex-start;
-	align-items: flex-start;
+	align-items: center;
 	flex-flow: row wrap;
 	margin-top: -40px;
 }
@@ -302,8 +302,8 @@ header-divider {
 	text-align: justify;
 	margin: 0 10px;
 	display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
+	justify-content: center;
+	align-items: center;
 	flex-flow: row wrap;
 }
 
@@ -333,6 +333,19 @@ header-divider {
 	margin-bottom: 0;
 }
 
+.form-container {
+	width: 285px;
+	padding: 10px 10px;
+	float: right;
+	margin-top: 0;
+	margin: -30px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	margin-left: 0;
+}
+
 .wbheading-container,
 .aaheading-container,
 .churchheading-container,
@@ -342,8 +355,7 @@ header-divider {
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
-	margin: -90px 0;
-	position: relative;
+	margin: 0 0;
 	margin-bottom: 0;
 	margin-top: 0;
 }
@@ -402,7 +414,7 @@ header-divider {
     text-shadow: 2px 2px 2px #000000;
 	display: flex;
 	justify-content: flex-start;
-	align-items: flex-start;
+	align-items: center;
 	flex-flow: row wrap;
 }
 
@@ -605,7 +617,7 @@ header-divider {
 	margin: 0 15px;
 	display: flex;
 	justify-content: flex-start;
-	align-items: flex-start;
+	align-items: center;
 	flex-flow: row wrap;
 }
 
@@ -684,6 +696,7 @@ header-divider {
 	align-items: center;
 	flex-flow: row wrap;
 	margin-left: -30px;
+	margin-top: -150px;
 }
 
 .portfolio-social,
@@ -892,6 +905,7 @@ header-divider {
 
 	html {
 		width: 100%;
+		max-width: 760px;
 		font-size: 16px;
 		background: url("https://i.postimg.cc/WbMGBJ7R/bw-bg-biggest.png") no-repeat center center fixed; 
   		background-size: cover;
@@ -992,11 +1006,11 @@ header-divider {
     	float: right;
 		margin: 0 -40px;
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		justify-content: flex-end;
+		align-items: flex-end;
 		flex-flow: column wrap;
 		padding-top: 0;
-		margin-right: -190px;
+		margin-right: 15px;
 	}
 
 	.logo img {
@@ -1004,8 +1018,8 @@ header-divider {
 		margin: -90px 0;
 		float: left;
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		justify-content: flex-start;
+		align-items: flex-start;
 		flex-flow: column wrap;
 		margin-left: -18px;
 		padding-top: 0;
@@ -1780,6 +1794,7 @@ header-divider {
 
 	html {
 		width: 100%;
+		max-width: 1200px;
 		font-size: 16px;
 		background: url("https://i.postimg.cc/WbMGBJ7R/bw-bg-biggest.png") no-repeat center center fixed; 
   		background-size: cover;
@@ -1869,9 +1884,14 @@ header-divider {
 	.navigation span {
     	color: rgb(243, 72, 10);
     	float: right;
-    	margin: 0 0;
-		margin-left: 850px;
+    	margin: 0 -40px;
+		margin-right: 15px;
+		margin-left: 490px;
 		position: fixed;
+		display: flex;
+		align-content: flex-end;
+		align-items: flex-end;
+		flex-flow: row wrap;
 	} 
 	.logo img {
 		width: 21%;
@@ -1880,6 +1900,10 @@ header-divider {
 		margin: -80px 10px;
 		margin-bottom: 400px;
 		position: fixed;
+		display: flex;
+		align-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
 	}
 
 /* -------------------- HEADER CONTENT STYLES -------------------- */
@@ -1918,8 +1942,12 @@ header-divider {
     	margin: 0 0;
     	text-shadow: 2px 2px 4px #000000;
 		margin-top: -200px;
-		margin-left: 90px;
+		margin-left: 120px;
 		position: fixed;
+		display: flex;
+		align-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
 	}
 	
 	.service-heading h2 {
@@ -1929,8 +1957,12 @@ header-divider {
     	margin: 0 0;
     	text-shadow: 2px 2px 4px #000000;
 		margin-top: 160px;
-		margin-left: -460px;
+		margin-left: -430px;
 		position: fixed;
+		display: flex;
+		align-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
 	}
 	
 	.about-heading h2 {
@@ -1940,8 +1972,12 @@ header-divider {
     	margin: 0 0;
     	text-shadow: 2px 2px 4px #000000;
 		margin-top: 165px;
-		margin-left: -485px;
+		margin-left: -450px;
 		position: fixed;
+		display: flex;
+		align-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
 	}
 	
 	.contact-heading h2 {
@@ -1951,8 +1987,12 @@ header-divider {
     	margin: 0 0;
     	text-shadow: 2px 2px 4px #000000;
 		margin-top: 170px;
-		margin-left: -475px;
+		margin-left: -445px;
 		position: fixed;
+		display: flex;
+		align-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
 	}
 
 	.wb-heading,
@@ -2350,7 +2390,7 @@ header-divider {
 		box-shadow: 0 0 10px #f3480a; 
 		display: flex;
 		justify-content: flex-start;
-		align-items: flex-start;
+		align-items: center;
 		flex-flow: row wrap;
 	}
 
@@ -2358,6 +2398,10 @@ header-divider {
 		height: 2px;
 		float: left;
 		background: #f3480a;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
 	}
 
 	.html {
@@ -2507,7 +2551,7 @@ header-divider {
   		vertical-align: middle;
 		border: 1px solid #f3480a;
   		border-radius: 2px;
-  		padding: 37px;
+  		padding: 22px;
 		display: flex;
 		justify-content:space-between;
 		align-items: center;
@@ -2525,7 +2569,7 @@ header-divider {
   		vertical-align: middle;
 		border: 1px solid #f3480a;
   		border-radius: 2px;
-  		padding: 34px;
+  		padding: 32px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -2549,11 +2593,12 @@ header-divider {
 	.icon-column img,
 	.hero-column img,
 	.churchicon-column img {
+		width: 42%;
 		margin-top: 8px;
   		vertical-align: middle;
 		border: 1px solid #f3480a;
   		border-radius: 2px;
-  		padding: 22px;
+  		padding: 15px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -2570,31 +2615,53 @@ header-divider {
 		position: absolute;
 	}
 	
-	.portfolio-social,
-	.service-social {
-		margin-left: -450px;
+	.portfolio-social {
+		margin-left: -415px;
 		margin-top: 210px;
 		margin-bottom: 70px;
 		position: absolute;
+		display: flex;
+		align-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
+	}
+	
+	.service-social {
+		margin-left: -415px;
+		margin-top: 195px;
+		margin-bottom: 70px;
+		position: absolute;
+		display: flex;
+		align-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
 	}
 	
 	.about-social {
-		margin-left: -455px;
-		margin-top: 430px;
+		margin-left: -415px;
+		margin-top: 450px;
 		margin-bottom: 70px;
 		position: absolute;
+		display: flex;
+		align-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
 	}
 	
 	.contact-social {
-		margin-left: -455px;
+		margin-left: -415px;
 		margin-top: 180px;
 		margin-bottom: 70px;
 		position: absolute;
+		display: flex;
+		align-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row wrap;
 	}
 	
 	.wb-social {
 		margin-left: -632px;
-		margin-top: 1170px;
+		margin-top: 1280px;
 		margin-bottom: 70px;
 		display: flex;
 		justify-content: center;
@@ -2616,7 +2683,7 @@ header-divider {
 	
 	.church-social {
 		margin-left: -456px;
-		margin-top: 930px;
+		margin-top: 1050px;
 		margin-bottom: 70px;
 		display: flex;
 		justify-content: center;
